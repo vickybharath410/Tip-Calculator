@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+}
+
+:root {
+    --strong-cyan: pink;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    background-color: rgb(34, 60, 167);
+}
+
+.container-main {
+    border-radius: 15px;
+    max-width: 1020px;
+    margin: 0 auto;
+    background-color: rgb(194, 115, 154);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white);
+    padding: 1.3rem;
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.left-side {
+    padding: 1rem;
+}
+
+.left-side .title {
+    color: var(--grayish-cyan);
+    font-size: 0.7rem;
+}
+
+.left-side .box-1 input,
+.box-3 input {
+    background-color: var(--very-light-grayish-cyan);
+    border-radius: 3px;
+    border: transparent;
+    text-align: right;
+    padding: 0 0.5rem;
+    width: 100%;
+    color: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+.error-input {
+    border: 2px solid rgba(228, 34, 34, 0.75) !important;
+}
+
+.left-side .box-1 input:focus,
+.box-3 input:focus {
+    outline: 0.1em solid var(--strong-cyan);
+}
+
+ .box-1 {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.box-1 .title {
+    margin-bottom: 0.2rem;
+}
+
+.left-side .box-1 input::placeholder,
+.box-3 input::placeholder {
+    float: right;
+    padding: 0 0.6rem;
+    color: var(--grayish-cyan);
+}
+
+.box-1 img,
+.box-3 img {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+
+ .box-2 {
+    margin-bottom: 1rem;
+}
+
+.box-2 .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-2 .title {
+    margin-bottom: 0.3rem;
+}
+
+.custom-btn {
+    width: 90%;
+    text-align: right;
+    margin: 0.3rem;
+    width: 85%;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    
+    border: none;
+
+    cursor: pointer;
+}
+
+.custom-btn::placeholder {
+    text-align: center;
+    font-size: 17.5px;
+    font-weight: 700;
+    color: var(--grayish-cyan);
+    font-size: 0.8rem;
+}
+
+
+.tipsbtn {
+   background-color: darksalmon;
+    color: var(--white);
+    margin: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+ .box-3 {
+    position: relative;
+}
+
+.box-3 .title {
+    margin-bottom: 0.3rem;
+}
+
+.box-3 .alert {
+    display: none;
+}
+
+.display {
+    display: block;
+    position: absolute;
+    font-size: 0.6rem;
+    top: 0;
+    right: 0;
+    color: rgba(228, 34, 34, 0.75);
+}
+ .right-side {
+    background-color: var(--very-dark-cyan);
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+.tip-amount-div,
+.total-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-amount-div {
+    margin-bottom: 0.5rem;
+}
+
+.tip-amount-div .title,
+.total-div .title {
+    color: var(--white);
+    font-size: 0.7rem;
+}
+
+.tip-amount-div .title-2,
+.total-div .title-2 {
+    color: var(--grayish-cyan);
+    font-size: 0.55rem;
+}
+
+.right-side .price {
+    color: var(--strong-cyan);
+    font-size: 2rem;
+}
+
+.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.btn:disabled {
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+    background-color:rgb(245, 156, 201);
+
+}
+
+.btn {
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    padding: 0.3rem;
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+
+@media(max-width:425px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .btn-div {
+        margin-top: 1rem;
+    }
+
+    .box-2 .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
