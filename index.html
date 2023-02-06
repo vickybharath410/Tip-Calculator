@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title> Tip calculator app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="wrapper">
+        <div class="left-side">
+          <div class="box-1">
+            <img src="images/icon-dollar.svg" alt="" />
+            <p class="title">Bill</p>
+            <input id="bill" type="text" placeholder="$ 0" maxlength="15" />
+          </div>
+          <div class="box-2">
+            <p class="title">Select Tip %</p>
+            <div class="container">
+              <div id="five" class="tipsbtn">5%</div>
+              <div id="ten" class="tipsbtn">13%</div>
+              <div id="fifteen" class="tipsbtn">15%</div>
+              <div id="twenty-five" class="tipsbtn">24%</div>
+              <div id="fifty" class="tipsbtn">50%</div>
+              <input
+                class="custom-btn"
+                type="text"
+                placeholder="Custom"
+                maxlength="3"
+              />
+            </div>
+          </div>
+          <div class="box-3">
+            <img src="images/icon-person.svg" alt="" />
+            <p class="title">Number of People</p>
+            <p class="alert">Can't be zero</p>
+            <input id="people" type="text" placeholder="0" maxlength="10" />
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="tip-amount-div">
+            <div class="tip-amount-left-side">
+              <p class="title">Tip Amount</p>
+              <p class="title-2">/ person</p>
+            </div>
+            <div class="tip-amount-right-side">
+              <p id="amount" class="price">$0.00</p>
+            </div>
+          </div>
+
+          <div class="total-div">
+            <div class="total-left-side">
+              <p class="title">Total</p>
+              <p class="title-2">/ person</p>
+            </div>
+            <div class="total-right-side">
+              <div id="total" class="price">$0.00</div>
+            </div>
+          </div>
+
+          <div class="btn-div">
+            <button class="btn" disabled>Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
